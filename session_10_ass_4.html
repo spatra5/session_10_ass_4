@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script>
+		var myapp = angular.module("myapp", []);
+		myapp.controller("myfirstcontroller", function($scope) {
+			$scope.greetmsg = "Hello World!"
+		});
+		myapp.controller("mysecondcontroller", function($scope) {
+			$scope.greetmsg = "Welcome!!!"
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="myfirstcontroller">{{ greetmsg }}</div>
+		<div ng-controller="mysecondcontroller">{{ greetmsg }}</div>
+	</div>	
+</body>
+</html>
